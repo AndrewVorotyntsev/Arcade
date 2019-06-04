@@ -4,7 +4,13 @@
  Author      : AndrewVorotyntsev
  Version     :
  Copyright   : Your copyright notice
- Description : Hello World in C, Ansi-style
+ Description : Перемещение персонажем(циклопом) на стрелки.
+ При нажатии на цифры 1 , 2 , 3 появляются соответствующее количество листьев.
+ Нажатия на клавиши Q и E уменьшают (или увеличивают соответственно) количество
+ ледяных элементалей.
+ Данные(о кол-ве вызванных объектов) хранятся в файле Save.txt . Они загружаются оттуда
+ при запуске программы , и сохраняются туда при завершении игры.
+ Все ресурсы (изображения объектов) хранятся в папке resources.
  ============================================================================
  */
 
@@ -23,10 +29,10 @@ const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
 // путь к файлу с картинкой, содержащей файлы движения
-static const char portal[] = "resources/greenPortal.png";
-static const char sprite[] = "resources/cyclops.png";
-static const char mob[] = "resources/ice.png";
-static const char leaf[] = "resources/leaf.png";
+char portal[] = "resources/greenPortal.png";
+char sprite[] = "resources/cyclops.png";
+char mob[] = "resources/ice.png";
+char leaf[] = "resources/leaf.png";
 //Перемещение по осям(длинна шага)
 int posx = 50;
 int posy = 50;
